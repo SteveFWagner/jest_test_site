@@ -1,22 +1,103 @@
-.App {
-  text-align: center;
+
+/* 
+#4A4A48 dark-gray
+#566246 dark-green
+#A4C2A5 light-green
+#D8DAD3 gray
+#F1F2EB light-gray
+*/
+
+* {
+  font-family: 'Trebuchet MS';
+  background:#4A4A48;
+  color: #F1F2EB;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#login-inputs-container {
   display: flex;
   flex-direction: column;
+  flex-wrap: initial;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.login {
+  margin: 10px;
+  font-size: 30px;
+}
+
+header {
+  padding:20px;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#nav-bar button{
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  margin:20px;
+}
+
+.button {
+  border: #D8DAD3 2px solid;
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+#accounts-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+li, li>a {
+  margin:10px;
+  list-style-type: none;
+}
+
+.balance-container {
+  display: flex;
+}
+
+.account-number-container{
+  margin:20px;
+}
+
+table {
+  margin: 20px;
+}
+
+td {
+  width: 300px;
+  background:none;
+}
+
+.transaction:nth-child(even) {
+  background: #A4C2A5;
+}
+
+.transaction:nth-child(odd) {
+  background: #566246;
+}
+
+.balance{
+  color: #A4C2A5;
 }

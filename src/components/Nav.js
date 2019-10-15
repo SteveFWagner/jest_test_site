@@ -5,7 +5,7 @@ class Nav extends Component{
 
   render() {
     return(
-      <div style={{display:'flex', justifyContent:'space-between'}}>
+      <div id="nav-bar">
         <p>First National Fake</p>
         <div>
           <Link to='/'><button>Home</button></Link>
