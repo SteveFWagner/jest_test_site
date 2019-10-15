@@ -1,13 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav'
+import routes from './routes'
 
 function App() {
   return (
     <div className="App">
       <header>
-      <h1>Jest_Test_Checking</h1>
+        <Nav/>
       </header>
+      {routes}
     </div>
   );
 }
