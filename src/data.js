@@ -14,8 +14,6 @@ module.exports = {
       date:'09/03/2018',
       description:'Payday',
       amount:'$1500.22'
-    },
-
-
+    }
   ]
 }
