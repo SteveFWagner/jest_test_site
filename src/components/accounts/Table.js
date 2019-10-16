@@ -15,9 +15,14 @@ export default class Table extends Component{
   }
 
   getTableData = () => {
-    axios.get('/checking/30').then((transactions) => {
+    axios.get('/checking/30', 2000).then((transactions) => {
       this.setState({
         tableData:transactions
+      })
+      axios.get('/checking/90', 2000).then((transactions) => {
+        this.setState({
+          tableData:transactions
+        })
       })
     })
   }
