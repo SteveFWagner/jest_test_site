@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import TableRow from './TableRow'
-const data = require('../../data')
+import {axios} from './../../data'
 
 export default class Table extends Component{
   constructor(props){
@@ -15,8 +15,10 @@ export default class Table extends Component{
   }
 
   getTableData = () => {
-    this.setState({
-      tableData:data.checking
+    axios.get('/checking/30').then((transactions) => {
+      this.setState({
+        tableData:transactions
+      })
     })
   }
 
