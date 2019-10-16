@@ -40,11 +40,11 @@ const checking = [
 ]
 
 const axios = {
-  get: function (url) {
+  get: function (url, timeout) {
     return new Promise(function(resolve, reject) {
       return setTimeout(() => {
         resolve(getData(url))
-      }, 3000)
+      }, 2000)
     })
   }
 }
@@ -54,7 +54,7 @@ const getData = (url) => {
     return checking.filter((transaction) => {
       return transaction.ageInDays < 30
     })
-  } else if (url === '/checkint/90') {
+  } else if (url === '/checking/90') {
       return checking.filter((transaction) => {
         return transaction.ageInDays < 90
       })
