@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 const todaysDate = "09/03/2018" //not that this matters haha
 
 const checking = [
