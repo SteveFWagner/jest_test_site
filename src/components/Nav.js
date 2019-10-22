@@ -8,8 +8,15 @@ class Nav extends Component{
       <div id="nav-bar">
         <p>First National Fake</p>
         <div>
-          <Link to='/'><button>Home</button></Link>
-          <Link to='/checking'><button>Checking</button></Link>
+          <Link to='/home'>
+            <button>Home</button>
+          </Link>
+          <Link to='/checking'>
+            <button className='account-checking'>Checking</button>
+          </Link>
+          <Link to='/'>
+            <button>Login</button>
+          </Link>
         </div>
       </div>
     )
