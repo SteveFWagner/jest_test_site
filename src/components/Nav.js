@@ -14,6 +14,9 @@ class Nav extends Component{
           <Link to='/checking'>
             <button className='account-checking'>Checking</button>
           </Link>
+          <Link to='/credit'>
+            <button>Credit</button>
+          </Link>
           <Link to='/'>
             <button>Login</button>
           </Link>
