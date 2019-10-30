@@ -16,7 +16,7 @@ export default class Modal extends Component{
           <h3>I'm a super annoying Popup!</h3>
         </div>
         <p>Click here to be redirected to some non-sense.</p>
-        <button onClick={this.props.closeModal}>No Thanks!</button>
+        <button id="modal-button" onClick={this.props.closeModal}>No Thanks!</button>
       </div>
     )
   }
