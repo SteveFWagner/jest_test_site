@@ -6,7 +6,8 @@ export default class Credit extends Component{
   constructor(props){
     super(props)
     this.state = {
-      modal:false
+      modal:false,
+      modalTwo:false
     }
   }
 
@@ -14,28 +15,33 @@ export default class Credit extends Component{
     setTimeout(
       () => {
         this.setState({
-          modal:!this.state.modal
+          modal:!this.state.modal,
+          modalTwo:!this.state.modalTwo
         })
       },
       500
     )
   }
 
-  handleCloseModal = () => {
+  handleCloseModal = (prop, value) => {
     this.setState({
-      modal:false
+      [prop]:value
     })
   }
 
   render(){
     let modal
+    let modalTwo
     if(this.state.modal){
-      modal = <Modal closeModal={this.handleCloseModal}/>
+      modal = <Modal closeModal={this.handleCloseModal} modal='modal'/>
+    }
+    if(this.state.modalTwo){
+      modalTwo = <Modal closeModal={this.handleCloseModal} modal='modalTwo'/>
     }
     return(
     <div className="checking-container">
-      <div>
-        {modal}
+      <div id='ad-container'>
+        {modalTwo}
       </div>
       <div className="balance-container">
         <h2>Credit Balance</h2>
@@ -44,6 +50,7 @@ export default class Credit extends Component{
       <div className="account-number-container">
         <h4>Account Number: </h4>
         <h4 className="account-number">246813579</h4>
+        {modal}
       </div>
         <div className="transactions-container">
           <Table/>
