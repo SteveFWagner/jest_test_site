@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 
 export default class Modal extends Component{
   render() {
-    console.log('props',this.props)
     return(
       <div id="modal-container">
         <div id="modal-title">
